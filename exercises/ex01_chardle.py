@@ -29,5 +29,3 @@ if counter == 1:
     print(str(counter) + " instance of " + character + " in " + word)
 else:
         print(str(counter) + " instances of " + character + " in " + word)
-
-
