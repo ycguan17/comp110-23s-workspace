@@ -23,9 +23,9 @@ if (word[3] == character):
     print( character + " found in index 3")
 if (word[4] == character):
     print( character + " found at index 4")
-    if counter != 1:
-        print("No instances of " + character + " in " + word)
+if counter == 0:
+    print("No instances of " + character + " in " + word)
 if counter == 1:
     print(str(counter) + " instance of " + character + " in " + word)
-else:
-        print(str(counter) + " instances of " + character + " in " + word)
+if counter > 1:
+    print(str(counter) + " instances of " + character + " in " + word)
