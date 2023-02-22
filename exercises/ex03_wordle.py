@@ -48,11 +48,11 @@ def main() -> None:
     secret: str = "codes"
     current_round: int = 1
     while current_round <= 6:
-        print("=== Turn " + str(current_round) + "/6 ===")
+        print(f"=== Turn {current_round}/6 ===")
         guess: str = input_guess(len(secret))
         print(emojified (guess, secret))
         if guess == secret:  
-            print("You won in " + str(current_round) + "/6 turns!")
+            print(f"You won in {current_round}/6 turns!")
             exit()
         current_round = current_round + 1
     else:
