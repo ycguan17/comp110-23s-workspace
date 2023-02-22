@@ -55,9 +55,8 @@ def main() -> None:
             print(f"You won in {current_round}/6 turns!")
             exit()
         current_round = current_round + 1
-    else:
-        if guess != secret and current_round > 6:
-            print("X/6 - Sorry, try again tomorrow!")
+    if guess != secret and current_round > 6:
+        print("X/6 - Sorry, try again tomorrow!")
 
 
 if __name__ == "__main__":
