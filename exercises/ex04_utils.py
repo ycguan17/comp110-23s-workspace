@@ -16,7 +16,7 @@ def max(intList: list[int]) -> int:
     if len(intList) == 0:
         raise ValueError("max() arg is an empty List")
     idx: int = 0
-    maxNum: int = intList[ind]
+    maxNum: int = intList[idx]
     while idx < len(intList):
         if maxNum < intList[idx]:
             maxNum = intList [idx]
