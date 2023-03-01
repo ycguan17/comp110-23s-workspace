@@ -12,7 +12,7 @@ def all(intList: list[int], num: int) -> bool:
         idx += 1
     return True
 
-def max(intList : list[int]) -> int:
+def max (intList: list[int]) -> int:
     """Returns the largest in the List."""
     if len(intList) == 0:
         raise ValueError("max() arg is an empty List")
@@ -24,7 +24,7 @@ def max(intList : list[int]) -> int:
         idx += 1
     return maxNum
 
-def is_equal(list1: list[int], list2: list[int]) -> bool:
+def is_equal (list1: list[int], list2: list[int]) -> bool:
     """Returns True if every element at every index is equal in both list1 and list2."""
     idx: int = 0
     if len(list1) != len(list2):
@@ -36,6 +36,7 @@ def is_equal(list1: list[int], list2: list[int]) -> bool:
     return True
 
 def test() -> None:
+    """Testing the use of each function."""
     print("----Testing ALL function----")
     print(all([1, 2, 3], 1))
     print(all([1, 1, 1], 2))
@@ -47,6 +48,5 @@ def test() -> None:
     #print(max([]))
 
     print("----Testing IS_EQUAL function----")
-    print(is_equal( [1, 0, 1], [1, 0, 1]))
-    print(is_equal( [1, 0, 1], [1, 0, 1]))
-
+    print(is_equal([1, 0, 1], [1, 0, 1]))
+    print(is_equal([1, 0, 1], [1, 0, 1]))
