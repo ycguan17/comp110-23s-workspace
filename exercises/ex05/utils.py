@@ -2,7 +2,7 @@
 
 __author__: "730372605"
 
-def  only_evens(old_list: list[int]) -> list[int]:
+def only_evens(old_list: list[int]) -> list[int]:
     """Given a list returns a new list where the elements are only even."""
     even_list: list[int] = []
     for elem in old_list:
@@ -10,7 +10,7 @@ def  only_evens(old_list: list[int]) -> list[int]:
             even_list.append(elem)
     return even_list
 
-def  concat(list1: list[int], list2: list[int]) -> list[int]:
+def concat(list1: list[int], list2: list[int]) -> list[int]:
     """Given two lists, combines both lists in order."""
     new_list: list[int] = []
     for elem in list1:
@@ -19,7 +19,7 @@ def  concat(list1: list[int], list2: list[int]) -> list[int]:
         new_list.append(elem)
     return new_list
 
-def  sub(numlist: list[int], start_idx: int, end_idx: int) -> list[int]:
+def sub(numlist: list[int], start_idx: int, end_idx: int) -> list[int]:
     """Makes a subset list starting from start index ending at 1- end index."""
     end_list: list[int] = []
     if start_idx < 0:
