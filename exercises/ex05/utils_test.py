@@ -2,7 +2,10 @@
 
 __author__: "730372605"
 
+
 from exercises.ex05.utils import only_evens, sub, concat
+
+
 def test_one_elem() -> None:
     """Tests one element list for only_evens."""
     test_list: list[int] = [4]
