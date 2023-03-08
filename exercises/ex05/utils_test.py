@@ -1,9 +1,8 @@
+from exercises.ex05.utils import only_evens, sub, concat
+
 """Unit tests for ex05 utility functions."""
 
 __author__: "730372605"
-
-
-from exercises.ex05.utils import only_evens, sub, concat
 
 
 def test_one_elem() -> None:
