@@ -53,7 +53,7 @@ def main() -> None:
         print(emojified (guess, secret))
         if guess == secret:  
             print(f"You won in {current_round}/6 turns!")
-            exit()
+            return
         current_round = current_round + 1
     if guess != secret and current_round > 6:
         print("X/6 - Sorry, try again tomorrow!")
