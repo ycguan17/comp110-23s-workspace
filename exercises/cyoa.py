@@ -2,15 +2,15 @@
 
 __author__ = "730372605"
 
-player: str = input("What is your name? ")
-
 import random
-random_string = ''
+random_string = ""
 MAX_LIMIT = 1000
 random_int = random.randint(10, MAX_LIMIT, 10)
 num: int = random_int
 
-def secret() -> None:
+player: str = input("What is your name? ")
+
+def secret () -> None:
     """Adds points based on name length of player."""
     global points 
     idx: int = 0
@@ -19,21 +19,21 @@ def secret() -> None:
         idx = idx + 1
     return None
 
-def greet(name: str) -> str:
+def greet (name: str) -> str:
     """Summary and greetings for the game."""
-    greeting: str = "Welcome to the Escape Game, " + player + ". Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~"
+    print(f"Welcome to the Escape Game, {player}. Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~")
     return None
 
-def main() -> None:
+def main () -> None:
     """Main body of the game."""
     greet(player)
     points: int = 100
     ready: str = input(f"Are you ready to play {player} ? ")
-    answer: str = num*3
+    answer: str = num * 3
     if ready == "Yes" or "yes":
         choice: str = input("You have 3 options for starting points. Would you like to enter the kitchen, the bedroom or the basement first? ")
-        kitchen_answer: int = num*2 - num/10
-        basement_answer: int = num/10 - 50
+        kitchen_answer: int = num * 2 - num / 10
+        basement_answer: int = num / 10 - 50
         bedroom_answer: int = num + 50
         kitchen: str = "You walk in with the door still creaking behind you. The first thing that enters your sight is the red ink dripping from the countertop. You walk over to find the following written on top: S " + str(num) + "x2 - " + str(num) + "/10"
         basement: str = "You walk in with the door still creaking behind you. The first thing that enters your sight is the catalog of the food in front of you. You notice a expression written on the : M " + str(num) + "/10 - 50"
@@ -57,13 +57,13 @@ def main() -> None:
                     print(choice)
         if choice == "basement":
             print(basement)
-            ip: int = input("What is the answer? Hint: The letter is important later!~")
+            ip = input("What is the answer? Hint: The letter is important later!~")
             while ip != basement_answer:
                 print("Oops, not quite! Try again.")
                 points = points - 20
                 print(ip)
             else:
-                r: str = input("Are you ready to guess?")
+                r = input("Are you ready to guess?")
                 if r == "yes":
                     guess: int = input("Great! You head to the mansion door. On the side is a numberpad. What do you input?")
                     if guess != answer:
@@ -73,13 +73,13 @@ def main() -> None:
                     print(choice)
         if choice == "bedroom":
             print(bedroom)
-            ip: int = input("What is the answer? Hint: The letter is important later!~")
+            ip = input("What is the answer? Hint: The letter is important later!~")
             while ip != bedroom_answer:
                 print("Oops, not quite! Try again.")
                 points = points - 20
                 print(ip)
             else:
-                r: str = input("Are you ready to guess?")
+                r = input("Are you ready to guess?")
                 if r == "yes":
                     guess: int = input("Great! You head to the mansion door. On the side is a numberpad. What do you input?")
                     if guess != answer:
@@ -98,11 +98,11 @@ def main() -> None:
             return None
     print(f"Your final adventure points is {points} points.")
     if points <= 60:
-            print("Better luck next time!")
+        print("Better luck next time!")
     else:
         print("Good work!")
         if points > 100:
             print("Exceptional work! Glad you found the point multiplier~")
 
-if __name__ == "__main__":
+if  __name__ == "__main__":
     main()
