@@ -11,7 +11,7 @@ def secret() -> None:
     global points 
     idx: int = 0
     while idx <= len(player):
-        points: str = points + 20
+        points= points + 20
         idx = idx + 1
 
 
