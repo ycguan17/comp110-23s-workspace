@@ -15,7 +15,7 @@ def secret() -> None:
         idx = idx + 1
 
 
-def greet(name: str) -> None:
+def greet() -> None:
     """Asks for name and gives summary and greetings for the game."""
     global player
     player = input("What is your name?")
@@ -24,7 +24,7 @@ def greet(name: str) -> None:
 
 def main() -> None:
     """Main body of the game."""
-    greet(player)
+    greet()
     num: int = 500
     points = 100
     ready: str = input(f"Are you ready to play {player} ? ")
