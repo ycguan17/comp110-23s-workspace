@@ -7,8 +7,7 @@ player: str = input("What is your name? ")
 import random
 random_string = ''
 MAX_LIMIT = 1000
-for random_int in range(10, MAX_LIMIT, 10):
-    random_int = random.randint(10,MAX_LIMIT)
+random_int = random.randint(10, MAX_LIMIT, 10)
 num: int = random_int
 
 def secret() -> None:
