@@ -3,8 +3,9 @@
 __author__ = "730372605"
 
 player: str = "What is your name? "
-
 points: int = 100
+
+
 def secret() -> None:
     """Adds points based on name length of player."""
     global points 
