@@ -55,15 +55,15 @@ def main() -> None:
                     print(choice)
         if choice == "basement":
             print(basement)
-            ip = input("What is the answer? Hint: The letter is important later!~")
+            print(ip)
             while ip != basement_answer:
                 print("Oops, not quite! Try again.")
                 points = points - 20
                 print(ip)
             else:
-                r = input("Are you ready to guess?")
+                print(r)
                 if r == "yes":
-                    guess: int = input("Great! You head to the mansion door. On the side is a numberpad. What do you input?")
+                    print(guess)
                     if guess != answer:
                         print("Oops, try again!")
                         points = points - 20
@@ -71,15 +71,15 @@ def main() -> None:
                     print(choice)
         if choice == "bedroom":
             print(bedroom)
-            ip = input("What is the answer? Hint: The letter is important later!~")
+            print(ip)
             while ip != bedroom_answer:
                 print("Oops, not quite! Try again.")
                 points = points - 20
                 print(ip)
             else:
-                r = input("Are you ready to guess?")
+                print(r)
                 if r == "yes":
-                    guess: int = input("Great! You head to the mansion door. On the side is a numberpad. What do you input?")
+                    print(guess)
                     if guess != answer:
                         print("Oops, try again!")
                         points = points - 20
