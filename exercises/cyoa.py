@@ -11,14 +11,14 @@ def secret() -> None:
     global points 
     idx: int = 0
     while idx <= len(player):
-        points = points + 20
+        points: str = points + 20
         idx = idx + 1
 
 
 def greet() -> None:
     """Asks for name and gives summary and greetings for the game."""
     global player
-    player = input("What is your name?")
+    player: str = input("What is your name?")
     print(f"Welcome to the Escape Game, {player}. Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~")
 
 
@@ -26,7 +26,7 @@ def main() -> None:
     """Main body of the game."""
     greet()
     num: int = 500
-    points = 100
+    points: int = 100
     ready: str = input(f"Are you ready to play {player} ? ")
     answer: str = num * 3
     if ready == "Yes" or "yes":
@@ -94,7 +94,6 @@ def main() -> None:
             print(f"You now have {secret()} points!")
         if ready == "No" or "no":
             print("Thank you for choosing to play Escape Game!")
-            return None
     print(f"Your final adventure points is {points} points.")
     if points <= 60:
         print("Better luck next time!")
