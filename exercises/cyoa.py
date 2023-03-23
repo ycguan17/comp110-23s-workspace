@@ -15,6 +15,7 @@ for random_int in range(10, MAX_LIMIT, 10):
 num = random_int
 
 def secret() -> None:
+    """Adds points based on name length of player."""
     global points 
     idx: int = 0
     while idx <= len(player):
@@ -23,10 +24,12 @@ def secret() -> None:
     return points
 
 def greet() -> None:
+    """Summary and greetings for the game."""
     greeting: str = "Welcome to the Escape Game, " + player + ". Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~"
     return greeting
 
 def main() -> None:
+    """Main body of the game."""
     points: int = 100
     print(greet())
     ready: str = input(f"Are you ready to play {player} ? ")
