@@ -5,7 +5,7 @@ __author__ = "730372605"
 import random
 random_string = ""
 MAX_LIMIT = 1000
-random_int = random.randint(10, MAX_LIMIT, 10)
+random_int = random.randint(10, MAX_LIMIT)
 num: int = random_int
 
 player: str = input("What is your name? ")
