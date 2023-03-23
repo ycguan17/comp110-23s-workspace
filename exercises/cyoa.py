@@ -18,12 +18,12 @@ def secret() -> None:
     while idx <= len(player):
         points = points + 20
         idx = idx + 1
-    return points
+    return None
 
-def greet(name: str) -> None:
+def greet(name: str) -> str:
     """Summary and greetings for the game."""
     greeting: str = "Welcome to the Escape Game, " + player + ". Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~"
-    return greeting
+    return None
 
 def main() -> None:
     """Main body of the game."""
