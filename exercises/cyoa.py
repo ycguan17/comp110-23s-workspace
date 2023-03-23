@@ -2,7 +2,7 @@
 
 __author__ = "730372605"
 
-player: str = "What is your name? "
+player: str = ""
 points: int = 100
 
 
@@ -17,7 +17,7 @@ def secret() -> None:
 
 def greet(name: str) -> None:
     """Asks for name and gives summary and greetings for the game."""
-    player
+    player = input(player)
     print(f"Welcome to the Escape Game, {name}. Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~")
 
 
