@@ -2,17 +2,14 @@
 
 __author__ = "730372605"
 
-points: int = 100
 player: str = input("What is your name? ")
 
 import random
-
 random_string = ''
-
 MAX_LIMIT = 1000
 for random_int in range(10, MAX_LIMIT, 10):
     random_int = random.randint(10,MAX_LIMIT)
-num = random_int
+num: int = random_int
 
 def secret() -> None:
     """Adds points based on name length of player."""
@@ -23,15 +20,15 @@ def secret() -> None:
         idx = idx + 1
     return points
 
-def greet() -> None:
+def greet(name: str) -> None:
     """Summary and greetings for the game."""
     greeting: str = "Welcome to the Escape Game, " + player + ". Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~"
     return greeting
 
 def main() -> None:
     """Main body of the game."""
+    greet(player)
     points: int = 100
-    print(greet())
     ready: str = input(f"Are you ready to play {player} ? ")
     answer: str = num*3
     if ready == "Yes" or "yes":
@@ -48,6 +45,7 @@ def main() -> None:
             while ip != kitchen_answer:
                 print("Oops, not quite! Try again.")
                 points = points - 10
+                print(ip)
             else:
                 print("Congrats, on to the next room!")
                 r: str = input("Are you ready to guess?")
@@ -64,6 +62,7 @@ def main() -> None:
             while ip != basement_answer:
                 print("Oops, not quite! Try again.")
                 points = points - 20
+                print(ip)
             else:
                 r: str = input("Are you ready to guess?")
                 if r == "yes":
@@ -79,6 +78,7 @@ def main() -> None:
             while ip != bedroom_answer:
                 print("Oops, not quite! Try again.")
                 points = points - 20
+                print(ip)
             else:
                 r: str = input("Are you ready to guess?")
                 if r == "yes":
