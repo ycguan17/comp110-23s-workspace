@@ -5,20 +5,18 @@ __author__ = "730372605"
 player: str = input("What is your name? ")
 
 
-def secret() -> int:
+def secret() -> None:
     """Adds points based on name length of player."""
     global points 
     idx: int = 0
     while idx <= len(player):
         points = points + 20
         idx = idx + 1
-    return None
 
 
-def greet(name: str) -> str:
+def greet(name: str) -> None:
     """Summary and greetings for the game."""
     print(f"Welcome to the Escape Game, {player}. Currently you are trapped within a mansion. All the doors are locked except for the kitchen, the bedroom and the basement. In order to escape, you must find the corrrect code to open the main door. P.S. Keep in mind that you start off with 100 adventure points, which you lose with each wrong combination given. Each wrong combo subtracts 20 points. P.P.S. Try inputting the game name for a surprise!~")
-    return None
 
 
 def main() -> None:
