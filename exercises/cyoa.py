@@ -11,7 +11,7 @@ def secret() -> None:
     global points 
     idx: int = 0
     while idx <= len(player):
-        points= points + 20
+        points = points + 20
         idx = idx + 1
 
 
@@ -41,8 +41,8 @@ def main() -> None:
             print(kitchen)
             ip: int = input("What is the answer? Hint: The letter is important later!~ ")
             while ip != kitchen_answer:
-                print("Oops, not quite! Try again.")
-                points = points - 10
+                prignt("Oops, not quite! Try again.")
+                points : str = points - 10
                 print(ip)
             else:
                 print("Congrats, on to the next room!")
