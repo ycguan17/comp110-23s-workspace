@@ -1,7 +1,10 @@
 """Testing functions found in dictionary.py."""
 
-__author__: "730372605"
 from exercises.ex07.dictionary import invert, favorite_color, count
+
+
+__author__: "730372605"
+
 
 def test_letters() -> None:
     """Tests short dictionary of letters."""
@@ -42,7 +45,7 @@ def test_letter_values() -> None:
 def test_one_elem() -> None:
     """Given one element list, count keys."""
     test_list: list[str] = ["star"]
-    assert count(test_list) == {"star":1}
+    assert count(test_list) == {"star": 1}
 
 
 def test_multiple_elem() -> None:
